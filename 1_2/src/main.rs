@@ -18,15 +18,6 @@ fn main() {
         }
         let val_num: i32 = val.trim().parse().ok().expect("Expected numeric value");
         vec.push(val_num);
-        sum += val_num;
-        let cur_sum = sum;
-        if vals.contains(&cur_sum)
-        {
-            println!("{}", sum);
-            found = true;
-            break;
-        }
-        vals.insert(cur_sum);
     }
     while !found
     {
